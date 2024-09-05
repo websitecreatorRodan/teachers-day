@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Welcome to Our Website!</title>  
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;400&display=swap" rel="stylesheet">  
+    <style>  
+        body {  
+            font-family: 'Raleway', sans-serif;  
+            background: linear-gradient(to right, #b0c4de, #d3d3d3); /* Light blue and grey gradient */  
+            text-align: center;  
+            color: #333;  
+            margin: 0;  
+            padding: 0;  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+            height: 100vh;  
+            overflow: hidden;  
+        }  
+        .container {  
+            padding: 40px;  
+            max-width: 600px;  
+            background: #ffffff;  
+            border-radius: 10px;  
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  
+            animation: tuning 3s ease-in-out forwards;  
+            position: absolute;  
+        }  
+        .message {  
+            display: none;  
+            padding: 40px;  
+            max-width: 600px;  
+            background: #ffffff;  
+            border-radius: 10px;  
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  
+            animation: slideIn 3s ease-in-out forwards;  
+            position: absolute;  
+        }  
+        h1 {  
+            font-family: 'Great Vibes', cursive;  
+            font-size: 2.5em;  
+            color: #4682b4; /* Steel blue for headings */  
+            margin-bottom: 20px;  
+        }  
+        @keyframes tuning {  
+            0% { transform: translateY(-100%); opacity: 0; }  
+            50% { transform: translateY(0); opacity: 1; }  
+            100% { transform: translateY(100%); opacity: 0; }  
+        }  
+        @keyframes slideIn {  
+            0% { transform: translateY(100%); opacity: 0; }  
+            50% { transform: translateY(0); opacity: 1; }  
+            100% { transform: translateY(-100%); opacity: 0; }  
+        }  
+    </style>  
+    <script>  
+        // Show the second message after the first animation  
+        setTimeout(() => {  
+            document.querySelector('.container').style.display = 'none';  
+            const message = document.querySelector('.message');  
+            message.style.display = 'block';  
+            
+            // Redirect to another page after the second animation  
+            setTimeout(() => {  
+                window.location.href = "index2.html"; // Replace with your target URL  
+            }, 3000); // 3 seconds for the second animation duration  
+        }, 3000); // 3 seconds for the first animation duration  
+    </script>  
+</head>  
+<body>  
+    <div class="container">  
+        <h1>Welcome to Our Website!</h1>  
+    </div>  
+    <div class="message">  
+        <h1>Let's Get Into It!</h1>  
+    </div>  
+</body>  
+</html>  
